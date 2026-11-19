@@ -21,3 +21,15 @@ El proyecto Next.js se incorpora a `main` mediante Pull Request.
 ## Cómo contribuir
 
 Lee [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## Integración continua
+
+El workflow `.github/workflows/ci.yml` se ejecuta en cada Pull Request hacia `main` y en cada push a `main`. Instala las dependencias con `npm ci`, revisa el estilo con ESLint y compila la aplicación. La rama `main` exige que el check `lint-y-build` pase antes de fusionar.
+
+Para reproducirlo en local:
+
+```bash
+npm ci
+npm run lint
+npm run build
+```
